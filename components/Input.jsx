@@ -11,7 +11,7 @@ const Input = ({ setWeatherData, styles }) => {
         setErr();
         setWeatherData();
 
-        const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f7dd5f65195d863069e051cef5e0e2ec&units=imperial`)
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f7dd5f65195d863069e051cef5e0e2ec&units=imperial`)
         const data = await res.json();
         data.city = city;
         // console.log(data);
