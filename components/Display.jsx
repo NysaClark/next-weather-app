@@ -1,13 +1,14 @@
 'use client'
 import { useState } from 'react'
 import Input from './Input'
+import styles from "./display.module.css"
 
-function Display({ styles }) {
+function Display() {
   const [weatherData, setWeatherData] = useState();
 
   return (
     <div>
-      <Input setWeatherData={setWeatherData} styles={styles} />
+      <Input setWeatherData={setWeatherData} />
       <div>
         {weatherData ?
           <div
@@ -17,7 +18,7 @@ function Display({ styles }) {
             <h2 className={styles.temp} >
               {Math.round(weatherData.main.temp)}°
             </h2>
-            <p className={styles.desc}>
+            <p>
               {weatherData.weather[0].main}
             </p>
             <div className={styles.high_low}>

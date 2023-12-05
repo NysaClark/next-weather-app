@@ -1,7 +1,8 @@
 'use client'
 import { useState } from "react"
+import styles from "./input.module.css"
 
-const Input = ({ setWeatherData, styles }) => {
+const Input = ({ setWeatherData }) => {
     const [city, setCity] = useState("");
     const [err, setErr] = useState()
 
@@ -14,7 +15,7 @@ const Input = ({ setWeatherData, styles }) => {
         const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f7dd5f65195d863069e051cef5e0e2ec&units=imperial`)
         const data = await res.json();
         data.city = city;
-        // console.log(data);
+
         if (data.message) {
             setErr("City not found");
             return;

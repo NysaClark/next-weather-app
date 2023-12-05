@@ -1,0 +1,36 @@
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid black;
+  border-right: none;
+  padding: 0.5rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+}
+
+.searchTerm:focus {
+  border-color: transparent;
+  background-color: lightgray;
+  color: black;
+}
+
+.searchButton {
+  border: 1px solid black;
+  background: black;
+  text-align: center;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 0 5px 5px 0;
+}
+
+.error{
+    color: red;
+    text-align: center;
+    padding: .5rem 0;
+}
